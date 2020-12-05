@@ -1,5 +1,5 @@
 from django.contrib import admin
-from harvestmore.models import Notification,Event,UserRole,Image
+from .models import Notification,Event,UserRole,Image
 
 # Register your models here.
 

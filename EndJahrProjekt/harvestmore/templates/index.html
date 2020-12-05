@@ -10,7 +10,7 @@
     <title>Home Page</title>
 </head>
 <body class="full-height-grow">
-    <div class="container full-height-grow">
+    <div class="custom-container full-height-grow">
    <header class="main-header">
      <a href="/" class="brand-logo">
        <!-- <%--<img src="images/logo.png"/>--%> -->
@@ -19,7 +19,7 @@
      <nav class="main-nav">
        <ul>
          {% if user.is_authenticated %}
-         <li><a href="{% url 'profile' %}">Profile</a></li>
+         <li><a href="{% url 'profile' %}">{{ user.username}}</a></li>
          <li><a href="{% url 'logout' %}">Logout</a></li>
          {% else %}
          <li><a href="{% url 'login' %}">Login</a></li>
@@ -43,7 +43,7 @@
 
   
    <footer class="main-footer">
-   <div class="container">
+   <div class="custom-container">
      <nav class="footer-nav">
        <ul>
          <li><a href="#">About Us</a></li>

@@ -5,12 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="{% static 'bootstrap.css' %}"  />
-    
+    <link rel="stylesheet"  href="{% static 'style.css' %}"  />
+    <link rel="stylesheet"  href="{% static 'join.css' %}"  />
     <title>HarvestMore - Profile</title>
 </head>
-<body>
-    <div class="container jumbotron">
-        <h2>This is {{ user.email }}'s profile</h2>
+<body class="full-height-grow ">
+    <div class="custom-container full-height-grow col-md-12">
+        <header class="main-header">
+            <a href="/" class="brand-logo">
+              <!-- <%--<img src="images/logo.png"/>--%> -->
+              <div class="brand-logo-name">HarvestMore</div>
+            </a>
+            <nav class="main-nav">
+              <ul>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">{{ user.username}}</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+                
+              </ul>
+            </nav>
+          </header>
+        <section class="content-section ">
+            <h2>This is {{ user.email }}'s profile</h2>
+
+            <p>the same type of phone, images from each farm can
+                have different characteristics. We screened these images for
+                obvious data errors such as having photos of objects that are
+                not plants, but tried to minimize the amount of data clean-
+                ing in order to have a dataset that reflects the context under
+                which an automated cassava disease diagnosis tool would
+                be deployed. To simplify the challenge, we only labeled
+                each leaf with the most significant disease identified by ex-
+                perts from the government agency in charge of cassava dis-
+                ease surveillance. A follow up challenge will have a dataset
+                that reflects multiple disease labels per leaf along with the
+                severity of each label, and a setup t</p>
+        </section>
     </div>
+
+   <div class="join-page-circle-1"></div>
+   <div class="join-page-circle-2"></div>
+  
+    
+     <footer class="main-footer">
+     <div class="custom-container">
+       <nav class="footer-nav">
+         <ul>
+           <li><a href="#">About Us</a></li>
+           <li><a href="#">Contact</a></li>
+         </ul>
+       </nav>
+      
+     </div>
+   </footer>
+    
 </body>
 </html>

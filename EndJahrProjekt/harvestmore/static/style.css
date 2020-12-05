@@ -39,6 +39,12 @@ p .helptext{
 
 .brand-logo-name {
   margin-left: 1rem;
+  
+}
+
+.main-header a {
+  text-decoration: none;
+  background-color: none;
 }
 
 .main-nav ul, .footer-nav ul {
@@ -84,7 +90,7 @@ p .helptext{
   justify-content: space-between;
 }
 
-.container {
+.custom-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
