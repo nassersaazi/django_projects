@@ -9,5 +9,9 @@ myshop
 violent_python
 django-bootstrap4
 EndJahrProjekt/image_classification-master
-*.pyc
+EndJahrProjekt/.vscode
 libsys
+
+*.pyc
+*.code-workspace
+
