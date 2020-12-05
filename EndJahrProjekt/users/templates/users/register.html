@@ -7,45 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet"  href="{% static 'style.css' %}"  />
     <link rel="stylesheet"  href="{% static 'join.css' %}"  />
-    
-    <title>Admin Page</title>
+    <title>Register Page</title>
 </head>
 <body class="full-height-grow">
     <div class="container full-height-grow">
    <header class="main-header">
      <a href="/" class="brand-logo">
-       <!-- <%--<img src="images/logo.png"/>--%> -->
+       
        <div class="brand-logo-name">HarvestMore</div>
      </a>
-     <nav class="main-nav">
-       <ul>
-         <li><a href="{% url 'admin-home' %}">Manage Accounts</a></li>
-         <li><a href="#">Logout</a></li>  
-       </ul>
-     </nav>
+     
    </header>
-   
-        <main>
-       <section class="join-main-section">
-          <div class="add-user">
-               <div >
-                   <a class="btn" href="{% url 'add-user' %}">ADD USER</a>
-                   </div>
-           </div>
-           <div class="deactivate-user">
-                       <a class="btn" href="{% url 'deactivate-user' %}">DEACTIVATE USER</a>
-               
-               </div>
-              
-             
-               
-       </section>
+   <section class="join-main-section">
+     <h1 class="join-text">
+       Cassava Image Classification System
+     </h1>
+     <form  method="POST" class="join-form">
+         {% csrf_token %}
+      
+         <!-- <div class="input-group">
+         <label>Area:</label>
+         <input type="text"/>
+       </div>
 
-
-
+         <div class="input-group">
+         <label>Phone:</label>
+         <input type="text"/>
+       </div>
+       <div class="input-group">
+         <label>Password:</label>
+         <input type="password"/>
+       </div> --> 
+       {% for field in form %}
+       <div class="input-group">
+           <label>{{ field.label }}</label>
+           {{ field }}
+       </div>
+   {% endfor %}
        
-
-   </main>
+       <div class="input-group">
+         <button type="submit" class="btn">REGISTER</button>
+       </div>
+     </form>
+   </section>
  </div>
 
    <div class="join-page-circle-1"></div>
@@ -65,5 +69,3 @@
  </footer>
 </body>
 </html>
-
-

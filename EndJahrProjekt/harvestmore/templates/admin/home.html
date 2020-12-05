@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"  href="{% static 'style.css' %}"  />
+    <link rel="stylesheet"  href="{% static 'join.css' %}"  />
+    
+    <title>Admin Page</title>
+</head>
+<body class="full-height-grow">
+    <div class="container full-height-grow">
+   <header class="main-header">
+     <a href="/" class="brand-logo">
+       <!-- <%--<img src="images/logo.png"/>--%> -->
+       <div class="brand-logo-name">HarvestMore</div>
+     </a>
+     <nav class="main-nav">
+       <ul>
+         <li><a href="#">Manage Accounts</a></li>
+         <li><a href="#">Logout</a></li>  
+       </ul>
+     </nav>
+   </header>
+   
+        <main>
+       <section class="join-main-section">
+          <div class="add-user">
+               <div >
+                   <a class="btn" href="{% url 'add-user' %}">ADD USER</a>
+                   </div>
+           </div>
+           <div class="deactivate-user">
+                       <a class="btn" href="{% url 'deactivate-user' %}">DEACTIVATE USER</a>
+               
+               </div>
+              
+             
+               
+       </section>
+
+
+
+       
+
+   </main>
+ </div>
+
+   <div class="join-page-circle-1"></div>
+ <div class="join-page-circle-2"></div>
+
+  
+   <footer class="main-footer">
+   <div class="container">
+     <nav class="footer-nav">
+       <ul>
+         <li><a href="#">About Us</a></li>
+         <li><a href="#">Contact</a></li>
+       </ul>
+     </nav>
+    
+   </div>
+ </footer>
+</body>
+</html>
+
+

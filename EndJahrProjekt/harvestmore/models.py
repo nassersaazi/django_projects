@@ -13,7 +13,7 @@ class UserRole(models.Model):
         return self.title
 
 class Image(models.Model):
-    path = models.CharField(max_length=100)
+    path = models.ImageField(default='default.jpg',upload_to='cassava_images')
     uploader = models.ForeignKey(User, on_delete=models.CASCADE)
     date_uploaded = models.DateTimeField(default=timezone.now)
     labelled = models.BooleanField()
